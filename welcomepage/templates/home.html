@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Медичні Послуги</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .background-circles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      pointer-events: none;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fbcfe8 0%, #f9a8d4 100%);
+      opacity: 0.25;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .circle-1 {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: 15%;
+    }
+
+    .circle-2 {
+      width: 400px;
+      height: 400px;
+      top: 60%;
+      left: 70%;
+    }
+
+    .circle-3 {
+      width: 250px;
+      height: 250px;
+      top: 35%;
+      left: 45%;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-white to-pink-50 text-gray-900">
+  <!-- Фонові круги -->
+  <div class="background-circles">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-extrabold text-pink-600 tracking-tight">МедСервіс</h1>
+      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="#" class="text-gray-700 hover:text-pink-600 transition">Головна</a>
+        <a href="#" class="text-gray-700 hover:text-pink-600 transition">Про нас</a>
+        <a href="#" class="text-gray-700 hover:text-pink-600 transition">Послуги</a>
+        <a href="#" class="text-gray-700 hover:text-pink-600 transition">Контакти</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-pink-600 focus:outline-none text-2xl">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4">
+      <a href="#" class="block py-2 text-gray-700 hover:text-pink-600 border-b">Головна</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-pink-600 border-b">Про нас</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-pink-600 border-b">Послуги</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-pink-600">Контакти</a>
+    </div>
+  </header>
+
+  <section class="py-24 px-6 bg-gradient-to-br from-pink-50 to-white">
+    <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-5xl font-extrabold leading-tight mb-6">
+          Турбота про ваше <span class="text-pink-600">здоров’я</span>
+        </h2>
+        <p class="text-lg mb-8 text-gray-600">
+          Ми пропонуємо професійні медичні послуги з любов'ю та увагою до кожного пацієнта.
+        </p>
+        <a href="#" class="bg-pink-600 text-white px-6 py-3 rounded-xl text-lg shadow hover:bg-pink-700 transition">Записатись</a>
+      </div>
+      <div>
+        <img src="https://uabm.org/wp-content/uploads/2023/03/health-care_0dcsagj9cm.jpg" alt="Медичне обслуговування" class="rounded-3xl shadow-xl">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold text-center mb-16">Наші послуги</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+          <img src="https://images.openai.com/thumbnails/464481ded2461a90e39fc2a6d228eb05.jpeg" alt="Первинна допомога" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="text-xl font-semibold mb-3">Первинна допомога</h4>
+          <p class="text-gray-700 mb-4">Невідкладна допомога при нещасних випадках і захворюваннях.</p>
+          <a href="#" class="text-pink-600 font-semibold">Детальніше →</a>
+        </div>
+        <div class="bg-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+          <img src="https://letsmake.site/wp-content/uploads/2023/03/0f413ab88096d1906e5cffc2addbac25.gif" alt="Консультації" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="text-xl font-semibold mb-3">Консультації</h4>
+          <p class="text-gray-700 mb-4">Професійна консультація лікарів різних спеціальностей.</p>
+          <a href="#" class="text-pink-600 font-semibold">Детальніше →</a>
+        </div>
+        <div class="bg-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+          <img src="https://images.openai.com/thumbnails/b569cc70c5cc097c72839630f87a4d09.jpeg" alt="Обстеження" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="text-xl font-semibold mb-3">Обстеження</h4>
+          <p class="text-gray-700 mb-4">Сучасне обладнання для точного діагностування.</p>
+          <a href="#" class="text-pink-600 font-semibold">Детальніше →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-gradient-to-r from-pink-100 to-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-6">Зв’яжіться з нами</h3>
+      <p class="text-lg mb-10 text-gray-600">Залиште заявку, і ми зв'яжемося з вами найближчим часом.</p>
+      <a href="#" class="bg-pink-600 text-white px-8 py-4 rounded-xl text-lg shadow hover:bg-pink-700 transition">Контактна форма</a>
+    </div>
+  </section>
+
+  <footer class="bg-white text-center py-8 border-t">
+    <p class="text-gray-500">© 2025 МедСервіс. Всі права захищені.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
